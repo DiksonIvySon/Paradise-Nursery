@@ -1,6 +1,6 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { addToCart } from '../features/cartSlice'
+import { addToCart } from '../features/CartSlice'
 import './ProductListing.css'
 
 const plantData = [

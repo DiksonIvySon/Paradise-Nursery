@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-route
 import Landing from './pages/Landing'
 import ProductListing from './pages/ProductListing'
 import Header from './components/Header'
+import CartPage from './pages/CartPage'
 
 function AppWrapper() {
   const location = useLocation()
@@ -14,7 +15,7 @@ function AppWrapper() {
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="/products" element={<ProductListing />} />
-        <Route path="/cart" element={<div>Shopping Cart Page (coming soon)</div>} />
+        <Route path="/cart" element={<CartPage />} />
       </Routes>
     </>
   )
