@@ -3,13 +3,20 @@ import { useDispatch, useSelector } from 'react-redux'
 import { addToCart } from '../features/CartSlice'
 import './ProductListing.css'
 
+import fiddleLeafFig from '../assets/Fiddle-Leaf-Fig.webp'
+import snakePlant from '../assets/Snake-plant.jpg'
+import spiderPlant from '../assets/spider-plant.jpg'
+import aloeVera from '../assets/aloe-vera.jpeg'
+import peaceLily from '../assets/peace-lily.jpg'
+import cactus from '../assets/cactus.jpg'
+
 const plantData = [
-  { id: 1, name: 'Fiddle Leaf Fig', category: 'Indoor', price: 250, image: 'https://source.unsplash.com/200x200/?plant1' },
-  { id: 2, name: 'Snake Plant', category: 'Indoor', price: 180, image: 'https://source.unsplash.com/200x200/?plant2' },
-  { id: 3, name: 'Spider Plant', category: 'Pet Friendly', price: 120, image: 'https://source.unsplash.com/200x200/?plant3' },
-  { id: 4, name: 'Aloe Vera', category: 'Succulent', price: 100, image: 'https://source.unsplash.com/200x200/?aloe' },
-  { id: 5, name: 'Peace Lily', category: 'Pet Friendly', price: 220, image: 'https://source.unsplash.com/200x200/?plant4' },
-  { id: 6, name: 'Cactus', category: 'Succulent', price: 90, image: 'https://source.unsplash.com/200x200/?cactus' },
+  { id: 1, name: 'Fiddle Leaf Fig', category: 'Indoor', price: 250, image: fiddleLeafFig},
+  { id: 2, name: 'Snake Plant', category: 'Indoor', price: 180, image: snakePlant },
+  { id: 3, name: 'Spider Plant', category: 'Pet Friendly', price: 120, image: spiderPlant },
+  { id: 4, name: 'Aloe Vera', category: 'Succulent', price: 100, image: aloeVera },
+  { id: 5, name: 'Peace Lily', category: 'Pet Friendly', price: 220, image: peaceLily },
+  { id: 6, name: 'Cactus', category: 'Succulent', price: 90, image: cactus },
 ]
 
 function ProductListing() {
