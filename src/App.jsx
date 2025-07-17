@@ -1,20 +1,31 @@
 import React from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom'
 import Landing from './pages/Landing'
 import ProductListing from './pages/ProductListing'
+import Header from './components/Header'
 
-function App() {
+function AppWrapper() {
+  const location = useLocation()
+  const showHeader = location.pathname !== '/'
+
   return (
-    <Router>
+    <>
+      {showHeader && <Header />}
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="/products" element={<ProductListing />} />
-        <Route path="/products" element={<div>Product Listing Page (coming soon)</div>} />
+        <Route path="/cart" element={<div>Shopping Cart Page (coming soon)</div>} />
       </Routes>
-    </Router>
+    </>
   )
 }
 
-export default App
+export default function App() {
+  return (
+    <Router>
+      <AppWrapper />
+    </Router>
+  )
+}
 
 
